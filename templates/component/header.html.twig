@@ -1,0 +1,28 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{ path('home') }}">
+            <img src="https://png.pngtree.com/element_pic/16/11/02/bd886d7ccc6f8dd8db17e841233c9656.jpg">
+            GreatDeal
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('announcement_list') }}">Toutes les annonces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('announcement_add') }}">Ajouter votre annonce</a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline" method="get" action="{{ path('announcement_list') }}">
+            <input class="form-control mr-sm-2" name="query" type="search" placeholder="Recherche" aria-label="Recherche">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+        </form>
+    </nav>
+</header>

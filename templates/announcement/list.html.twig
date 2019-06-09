@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Nos annonces - {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+
+    <h1>Nos annonces</h1>
+
+    <div class="announcements">
+        {% for announcement in announcements %}
+
+            <div class="card">
+                <div class="card-img-top" style="background-image:url('{{ announcement.img1 }}');">
+
+
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">{{ announcement.title }}</h2>
+                    <p class="card-text">{{ announcement.description|slice(0, 100) }}...</p>
+                    <div class="card-info">
+                        <div>{{ announcement.price ? announcement.price ~ '€' : 'Gratuit' }}</div>
+                        <div>{{ announcement.category.name }}</div>
+                    </div>
+                    <a href="{{ path( 'announcement_show', {"id": announcement.id} ) }}" class="btn btn-primary">Voir plus</a>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

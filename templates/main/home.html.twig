@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Accueil - {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="landing">
+    <div class="landing-overlay">
+        <h1>Great Deal !</h1>
+        <p>La plateforme d'exception quand il s'agit d'occasions et vente aux particuliers !</p>
+
+        <a href="{{ path('announcement_list') }}" class="btn btn-primary">Découvrir nos événements</a>
+    </div>
+</div>
+{% endblock %}
